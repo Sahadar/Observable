@@ -96,7 +96,6 @@ Observable = (function() {
 			var namespace = (typeof namespace === 'string') ? namespace : (console.error('Namespace must be string type'), 'randomString'),
 				parts = namespace.split(':'), //array of splitted parts
 				nsObject, //Namespace object from which we detach event
-				data = data || {},
 				i;
 			
 			//Iterating through _eventObject to find proper nsObject

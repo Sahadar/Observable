@@ -1,0 +1,26 @@
+<html>
+<head>
+	<script type="text/javascript" src="observable.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		var observable = new Observable();
+		observable.addEventListener("change:title", function(data) {
+			console.log("title has changed to ", data.title);
+		});
+		observable.trigger("change:title", { title: "foo" }); // "title has changed to foo"
+		observable.trigger("change", { title: "bar" }); // "title has changed to bar"
+
+	    var anotherHandler = function() {
+	    	console.log("I'm another handler");
+	    };
+	    var handler = function(data) {
+		    console.log("removing my friend");
+		    observable.removeEventListener("change:title", anotherHandler);
+	    };
+	    observable.addEventListener("change:title", handler);
+	    observable.addEventListener("change:title", anotherHandler);
+	    observable.trigger("change:title", { title: "moo" }); // "removing my friend"
+	</script>
+</body>
+</html>

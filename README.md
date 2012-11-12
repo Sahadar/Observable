@@ -12,18 +12,18 @@ Methods
 -------
 
 **trigger**(namespace, data)
-* Trigger event on given namespace, namespace can be separated by ":"
+_Trigger event on given namespace, namespace can be separated by ":"_
 * @param  {string} namespace Event namespace (which we want to trigger)
 * param  {object} data      Data for event callbacks
 
 **addEventListener**(namespace, callback, callback_object)
-* Listen on events distinguished by namespace
+_Listen on events distinguished by namespace_
 * @param  {string} namespace Event namespace (which we want to trigger)
 * @param  {object} callback Callback which will be triggered on event
 * @param  {callback_object} Object which will be "this" inside callback
 
 **removeEventListener**((namespace, callback)
-* Remove triggered callback from event namespace
+_Remove triggered callback from event namespace_
 * @param  {string} namespace Event namespace
 * @param  {object} callback  Callback which we want to remove from event namespace
 

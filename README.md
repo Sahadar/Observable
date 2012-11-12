@@ -15,7 +15,7 @@ Methods
 
 _Trigger event on given namespace, namespace can be separated by ":"_
 * @param  {string} namespace Event namespace (which we want to trigger)
-* param  {object} data      Data for event callbacks
+* @param  {object} data      Data for event callbacks
 
 **addEventListener**(namespace, callback, callback_object)
 

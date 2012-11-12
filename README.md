@@ -24,7 +24,7 @@ _Listen on events distinguished by namespace_
 * @param  {object} callback Callback which will be triggered on event
 * @param  {callback_object} Object which will be "this" inside callback
 
-**removeEventListener**((namespace, callback)
+**removeEventListener**(namespace, callback)
 
 _Remove triggered callback from event namespace_
 * @param  {string} namespace Event namespace
